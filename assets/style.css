@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+:root {
+  /* Background Color */
+  --primary-color:#fff;
+  --secundary-color :#F5F7FA;
+  --terciary-color :#263238;
+
+  /* Text color */
+
+  --text-color-highlight :#4CAF4F;
+  --text-color-title :#4D4D4D;
+  --text-color-paragraph :#717171;
+  --text-color-button :#fff;
+  --text-color-footer :#F5F7FA;
+  --text-color-title-footer :#fff;
+  --text-color-finaly-title :#263238;
+  --text-color-muted :#89939E;
+
+  /* Font */
+  
+  --text-font-title : Inter;
+
+}
+
+* {
+  font-family: var(--text-font-title);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
