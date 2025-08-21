@@ -2,31 +2,175 @@
 
 
 :root {
-  /* Background Color */
-  --primary-color:#fff;
-  --secundary-color :#F5F7FA;
-  --terciary-color :#263238;
+  /*Font Families*/
+  --font-family-primary: 'Inter', sans-serif;
 
-  /* Text color */
+  /*Font Sizes*/
+  --font-size-hero: 4rem;            
+  --font-size-footer-headline: 4rem; 
+  --font-size-section-title: 2.25rem; 
+  --font-size-topic: 1.75rem;        
+  --font-size-card-title: 1.25rem;   
+  --font-size-body: 1rem;            
+  --font-size-caption: 0.875rem;     
 
-  --text-color-highlight :#4CAF4F;
-  --text-color-title :#4D4D4D;
-  --text-color-paragraph :#717171;
-  --text-color-button :#fff;
-  --text-color-footer :#F5F7FA;
-  --text-color-title-footer :#fff;
-  --text-color-finaly-title :#263238;
-  --text-color-muted :#89939E;
+        /*Line Heights*/
 
-  /* Font */
-  
-  --text-font-title : Inter;
+    --line-height-menu: 5.25rem;
+    --line-height-hero: 4.75rem;
+    --line-height-footer-headline: 4.75rem; 
+    --line-height-section-title: 2.75rem; 
+    --line-height-topic: 2.25rem;
+    --line-height-card-title: 1.75rem;
+    --line-height-body: 1.5rem;
+    --line-height-caption: 1.25rem;
 
+  /*Font Weights*/
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+    /*background color*/
+
+    --color-primary: #FFF;
+    --color-secondary: #F5F7FA;
+    --color-tertiary: #263238;
+
+    /*text color*/
+
+    --text-color-menu: #18191f;
+    --text-color-title: #4D4D4D;
+    --text-color-suport: #717171;
+    --text-color-highlight: #4CAF4F;
+    --text-color-footer: #F5F7FA;
+    --text-color-finaly: #263238;
+    --text-color-muted: #89939E;
+    --text-color-button: #FFF;
+    --text-color-title-footer:#FFF;
 }
 
 * {
-  font-family: var(--text-font-title);
+  font-family: var(--font-family-primary);
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.navbar {
+  justify-content: space-around;
+  display: flex;
+  background-color: var(--color-secondary);
+  height: var(--line-height-menu);
+  flex-shrink: 0;
+  align-items: center;
+  
+}
+
+.navbar-menu {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 3.125rem;
+}
+.menu-link {
+  font-size: var(--font-size-body);
+  font-style: normal;
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-body);
+  color: var(--text-color-menu);
+  text-decoration: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.navbar-buttons {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 0.875rem; 
+}
+
+.buttom-login {
+  display: flex;
+  padding: 0.625rem 1.25rem;
+  align-items: center;
+  gap: 0.625rem;
+  background-color: transparent;
+  border: none;
+  border-radius: 0.375rem;
+  color: var(--text-color-highlight);
+  text-decoration: none;
+}
+
+.buttom-sign {
+  display: flex;
+  padding: 0.625rem 1.25rem;
+  align-items: center;
+  gap: 0.625rem;
+  background-color: var(--text-color-highlight);
+  border: none;
+  border-radius: 0.375rem;
+  color: var(--text-color-button);
+  text-decoration: none;
+}
+
+.hero {
+  background-color: var(--color-secondary);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  display: flex;
+  padding: 6rem 9rem;
+  align-items: center;
+  gap: 6.5rem;
+  align-self: stretch;
+
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.hero-title {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-hero);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-hero); 
+margin-bottom: 1rem;
+}
+
+.highlight {
+  color: var(--text-color-highlight);
+}
+
+.hero-text {
+  color: var(--text-color-suport);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-body);
+  margin-bottom: 2rem;
+}
+
+.hero-button {
+  background-color: var(--text-color-highlight);
+  color: var(--text-color-button);
+  display: flex;
+  padding: 0.875rem 2rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  border: none;
+  border-radius: 0.25rem;
+  text-decoration: none;
 }
