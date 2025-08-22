@@ -236,7 +236,7 @@ line-height: 2.75rem;
 }
 
 .community-text {
-  color: var(--text-color-suport);
+color: var(--text-color-suport);
 text-align: center;
 font-family: var(--font-family-primary);
 font-size: var(--font-size-body);
