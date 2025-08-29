@@ -105,11 +105,87 @@ p {
   width: 100%;
 }
 
+/* MENU */
+
 .container-navbar {
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: var(--line-height-menu);
+}
+
+/* Esconde o checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Ícone dos 3 risquinhos */
+.menu-icon {
+  display: block;
+  width: 30px;
+  height: 25px;
+  position: relative;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.menu-icon span {
+  display: block;
+  height: 3px;
+  background: #000;
+  margin: 5px 0;
+  transition: 0.3s;
+}
+
+/* Gaveta do menu */
+.menu-drawer {
+  position: fixed;
+  top: 0;
+  left: -250px; /* começa escondido */
+  width: 250px;
+  height: 100%;
+  background: #fff;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+  transition: left 0.3s;
+  padding-top: 60px; /* espaço pro ícone */
+}
+
+/* Links do menu */
+.menu-drawer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-drawer li {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.menu-drawer a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+/* Abre o menu quando o checkbox estiver marcado */
+#menu-toggle:checked ~ .menu-drawer {
+  left: 0;
+}
+
+/* Transformar os 3 risquinhos em X (opcional) */
+#menu-toggle:checked + .menu-icon span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+#menu-toggle:checked + .menu-icon span:nth-child(2) {
+  opacity: 0;
+}
+#menu-toggle:checked + .menu-icon span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+.mobile-menu {
+  display: none;
 }
 
 .navbar {
@@ -197,7 +273,7 @@ p {
   color: var(--text-color-title);
   font-family: var(--font-family-primary);
   font-size: var(--font-size-hero);
-  width: 41rem;
+  width: 100%;
   font-weight: var(--font-weight-semibold);
   line-height: var(--line-height-hero);
   padding-bottom: 1rem;
@@ -242,7 +318,7 @@ p {
 
 .content-client {
   display: flex;
-  width: 85rem;
+  width: 100%;
   padding: 0 5.2rem;
   flex-direction: column;
   align-items: center;
@@ -259,8 +335,8 @@ p {
 
 .client-companies {
   display: flex;
-  width: 72rem;
-  height: 6.125rem;
+  width: 100%;
+  height: 6rem;
   justify-content: space-between;
   align-items: center;
 }
@@ -286,7 +362,8 @@ p {
 
 .membership-national-clubs {
   display: flex;
-  width: 85rem;
+  width: 100%;
+  flex-wrap: wrap;
   padding: 0 7rem;
   justify-content: space-between;
   align-items: center;
@@ -362,12 +439,12 @@ p {
 
 .login-person {
   display: flex;
-  width: 27rem;
+  width: 100%;
 }
 
 .content-unlock {
   display: flex;
-  width: 37.5rem;
+  width: 100%;
   flex-direction: column;
   align-items: flex-start;
 }
@@ -441,6 +518,7 @@ p {
   flex-direction: column;
   align-items: center;
   padding: 3rem 0 5rem 0;
+  gap: 1rem;
 }
 .content-person {
   display: flex;
@@ -453,7 +531,7 @@ p {
 
 .person {
   display: flex;
-  width: 85rem;
+  width: 100%;
   padding: 0 5rem;
   justify-content: space-between;
   align-items: center;
@@ -585,8 +663,8 @@ footer ul {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 22rem;
-  height: 12rem;
+  width: 40%;
+  height: 20%;
   gap: 2.5rem;
 }
 
@@ -606,6 +684,7 @@ footer ul {
 .footer-container-links {
   display: flex;
   align-items: flex-start;
+  flex-wrap: wrap;
   width: 40rem;
   height: 12.5rem;
   gap: 2rem;
@@ -655,7 +734,7 @@ footer ul {
 }
 
 .input {
-  color: white;
+  color: var(--text-color-footer);
   width: 14.5rem;
   height: 2.5rem;
   position: relative;
@@ -677,4 +756,26 @@ footer ul {
 .arrow-input {
   position: absolute;
   transform: translate(-1.5rem, 0.7rem);
+}
+
+/* MEDIA */
+
+@media (max-width: 1023px) {
+  .container {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .navbar-menu,
+  .navbar-buttons {
+    display: none;
+  }
+
+  #menu-toggle {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
 }
