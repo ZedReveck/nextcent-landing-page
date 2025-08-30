@@ -126,6 +126,7 @@ p {
   height: 25px;
   position: relative;
   cursor: pointer;
+  left: 30px;
   z-index: 10;
 }
 
@@ -499,6 +500,7 @@ p {
 .tesla-companies {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 3rem;
   padding-top: 2rem;
 }
@@ -532,6 +534,7 @@ p {
 .person {
   display: flex;
   width: 100%;
+  flex-wrap: wrap;
   padding: 0 5rem;
   justify-content: space-between;
   align-items: center;
@@ -766,9 +769,14 @@ footer ul {
     width: 100%;
   }
 
+  .nav-logo {
+    padding: 3rem;
+  }
+
   .navbar-menu,
   .navbar-buttons {
     display: none;
+    max-width: 1023px;
   }
 
   #menu-toggle {
@@ -777,5 +785,51 @@ footer ul {
 
   .mobile-menu {
     display: block;
+    margin-left: auto;
+  }
+
+  .menu-icon {
+    margin-right: 3rem;
+  }
+
+  /* HERO */
+
+  .hero-image {
+    display: none;
+  }
+
+  /* CLIETS */
+
+  .community {
+    padding-bottom: 2rem;
+  }
+
+  .membership-national-clubs {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .container-business {
+    gap: 1.5rem;
+  }
+
+  .person {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5rem;
+  }
+  .card {
+    margin-top: 5rem;
+  }
+
+  .footer {
+    padding: 3rem 1rem;
+    gap: 2.5rem;
+  }
+
+  .footer-social {
+    width: 35%;
   }
 }
