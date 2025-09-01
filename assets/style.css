@@ -524,7 +524,6 @@ p {
 }
 .content-person {
   display: flex;
-  width: 40rem;
   text-align: center;
   flex-direction: column;
   align-items: center;
@@ -642,6 +641,7 @@ p {
 .footer {
   display: flex;
   padding: 4rem 5rem;
+  justify-content: center;
   align-items: flex-start;
   gap: 7rem;
 }
@@ -666,8 +666,6 @@ footer ul {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 40%;
-  height: 20%;
   gap: 2.5rem;
 }
 
@@ -734,6 +732,10 @@ footer ul {
   flex-direction: column;
   align-items: flex-start;
   gap: 1.875rem;
+}
+
+.footer-input-mobile {
+  display: none;
 }
 
 .input {
@@ -824,12 +826,108 @@ footer ul {
     margin-top: 5rem;
   }
 
+  /* UNLOCK PERSON */
+
+  .unlock {
+    flex-wrap: wrap;
+  }
+
+  /* BUSINESS */
+
+  .container-business {
+    flex-wrap: wrap;
+  }
+
+  /* TESLA */
+
+  .container-tesla {
+    flex-wrap: wrap;
+  }
+
+  /* FOOTER */
   .footer {
     padding: 3rem 1rem;
     gap: 2.5rem;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 576px) {
+  /* * {
+    border: 1px solid red;
+  } */
+
+  .container {
+    max-width: 100%;
+    width: 100%;
   }
 
-  .footer-social {
-    width: 35%;
+  .hero-content {
+    align-items: center;
+  }
+
+  /* CLIENTS */
+
+  .client-companies {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    place-items: center;
+  }
+
+  .company-7 {
+    display: none;
+  }
+
+  /* UNLOCK */
+
+  .unlock {
+    flex-wrap: wrap;
+  }
+
+  .content-unlock {
+    text-align: center;
+    align-items: center;
+  }
+
+  /* BUSINESS */
+
+  .container-business {
+    flex-wrap: wrap;
+  }
+
+  /* TESLA */
+
+  .container-tesla {
+    flex-wrap: wrap;
+  }
+
+  .company-6 {
+    display: none;
+  }
+
+  /* FOOTER */
+
+  .footer {
+    flex-wrap: wrap;
+  }
+
+  .footer-input {
+    display: none;
+  }
+
+  .container-social {
+    display: flex;
+    /* flex-direction: row; */
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .footer-container-links {
+    justify-content: space-around;
+  }
+
+  .footer-input-mobile {
+    display: block;
   }
 }
