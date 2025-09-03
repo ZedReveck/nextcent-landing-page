@@ -61,6 +61,10 @@ body {
 /* REGRAS */
 
 * {
+  border: 1px solid red;
+}
+
+* {
   font-family: var(--font-family-primary);
   margin: 0;
   padding: 0;
@@ -713,8 +717,6 @@ footer ul {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 10rem;
-  height: 1.25rem;
   gap: 1.5rem;
 }
 
@@ -723,7 +725,6 @@ footer ul {
   flex-direction: column;
   align-items: flex-start;
   width: 10rem;
-  height: 1.25rem;
   gap: 0.75rem;
 }
 
