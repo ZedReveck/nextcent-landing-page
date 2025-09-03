@@ -61,10 +61,6 @@ body {
 /* REGRAS */
 
 * {
-  border: 1px solid red;
-}
-
-* {
   font-family: var(--font-family-primary);
   margin: 0;
   padding: 0;
