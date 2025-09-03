@@ -8,6 +8,7 @@
   --font-size-hero: 4rem;
   --font-size-footer-headline: 4rem;
   --font-size-section-title: 2.25rem;
+  --font-size-section-title-mobile: 1.75rem;
   --font-size-topic: 1.75rem;
   --font-size-card-title: 1.25rem;
   --font-size-body: 1rem;
@@ -66,9 +67,12 @@ body {
   box-sizing: border-box;
 }
 
+img {
+  max-width: 100%;
+}
+
 h2 {
   color: var(--text-color-title);
-  font-family: var(--font-family-primary);
   font-size: var(--font-size-section-title);
   font-weight: var(--font-weight-semibold);
   line-height: var(--line-height-section-title);
@@ -76,7 +80,6 @@ h2 {
 
 p {
   color: var(--text-color-suport);
-  font-family: var(--font-family-primary);
   font-size: var(--font-size-body);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-body);
@@ -91,7 +94,6 @@ p {
 }
 
 .container-colored {
-  background-color: var(--color-secondary);
   width: 100%;
 }
 
@@ -272,7 +274,6 @@ p {
 
 .hero-title {
   color: var(--text-color-title);
-  font-family: var(--font-family-primary);
   font-size: var(--font-size-hero);
   width: 100%;
   font-weight: var(--font-weight-semibold);
@@ -286,7 +287,6 @@ p {
 
 .hero-text {
   color: var(--text-color-suport);
-  font-family: var(--font-family-primary);
   font-size: var(--font-size-body);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-body);
@@ -362,10 +362,11 @@ p {
 /* MEMBERSHIP */
 
 .membership-national-clubs {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   width: 100%;
-  flex-wrap: wrap;
-  padding: 0 7rem;
+  column-gap: 20px;
+  padding: 0 4rem;
   justify-content: space-between;
   align-items: center;
 }
@@ -375,12 +376,12 @@ p {
 .clubs {
   display: flex;
   padding: 1.5rem 2rem;
-  width: 299px;
+  width: 100%;
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
   text-align: center;
-
+  height: 100%;
   border-radius: 0.5rem;
   background: var(--color-primary);
   box-shadow: 0 2px 4px 0 rgba(171, 190, 209, 0.2);
@@ -391,8 +392,13 @@ p {
 .clubs p {
   width: 251px;
   color: var(--text-color-suport);
-  font-family: var(--font-family-primary);
   font-size: var(--font-size-caption);
+}
+
+.membership h2,
+.national h2,
+.clubs h2 {
+  flex: 1;
 }
 
 /* BUSINESS SECTION */
@@ -416,7 +422,6 @@ p {
 
 .content-statistics h3 {
   color: var(--text-color-title);
-  font-family: var(--font-family-primary);
   font-size: var(--font-size-topic);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-topic);
@@ -519,7 +524,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 3rem 0 5rem 0;
+  padding: 3rem 2rem 5rem 2rem;
   gap: 1rem;
 }
 .content-person {
@@ -531,12 +536,13 @@ p {
 }
 
 .person {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   width: 100%;
-  flex-wrap: wrap;
   padding: 0 5rem;
   justify-content: space-between;
   align-items: center;
+  column-gap: 30px;
 }
 
 .image-person {
@@ -557,8 +563,8 @@ p {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  width: 20rem;
-  height: 11rem;
+  width: calc(100% - 30px);
+  min-height: 11rem;
 
   position: absolute;
   bottom: -4rem;
@@ -577,13 +583,11 @@ p {
 }
 
 .card h4 {
-  font-family: var(--font-family-primary);
   color: var(--text-color-suport);
   text-align: center;
   font-size: var(--font-size-card-title);
   font-weight: var(--font-weight-semibold);
   line-height: var(--line-height-card-title);
-  width: 17rem;
 }
 
 .card a {
@@ -610,11 +614,9 @@ p {
   gap: 2rem;
 }
 
-.demo h1 {
-  color: var(--color-tertiary);
+.demo h2 {
   text-align: center;
   font-size: var(--font-size-hero);
-  font-weight: var(--font-weight-semibold);
   line-height: var(--line-height-hero);
 }
 
@@ -648,7 +650,6 @@ p {
 
 .footer h4 {
   color: var(--text-color-title-footer);
-  font-family: var(--font-family-primary);
   font-size: var(--font-size-card-title);
   font-weight: var(--font-weight-semibold);
   line-height: var(--line-height-card-title);
@@ -656,7 +657,6 @@ p {
 
 footer ul {
   color: var(--text-color-footer);
-  font-family: var(--font-family-primary);
   font-size: var(--font-size-caption);
   font-weight: var(--font-weight-footer);
   line-height: var(--line-height-caption);
@@ -771,6 +771,10 @@ footer ul {
     width: 100%;
   }
 
+  .demo h2 {
+    font-size: var(--font-size-section-title-mobile);
+  }
+
   .nav-logo {
     padding: 3rem;
   }
@@ -807,9 +811,14 @@ footer ul {
   }
 
   .membership-national-clubs {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+  }
+
+  .membership,
+  .national,
+  .clubs {
+    width: 100%;
   }
 
   .container-business {
@@ -821,6 +830,7 @@ footer ul {
     flex-wrap: wrap;
     justify-content: center;
     gap: 5rem;
+    padding: 0 0;
   }
   .card {
     margin-top: 5rem;
@@ -830,6 +840,15 @@ footer ul {
 
   .unlock {
     flex-wrap: wrap;
+  }
+
+  .content-unlock {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content-unlock p {
+    text-align: center;
   }
 
   /* BUSINESS */
@@ -852,10 +871,10 @@ footer ul {
   }
 }
 
-@media (max-width: 576px) {
-  /* * {
-    border: 1px solid red;
-  } */
+@media (max-width: 639px) {
+  h2 {
+    font-size: var(--font-size-section-title-mobile);
+  }
 
   .container {
     max-width: 100%;
@@ -864,6 +883,14 @@ footer ul {
 
   .hero-content {
     align-items: center;
+  }
+
+  .hero {
+    padding: 2rem;
+  }
+
+  .hero h1 {
+    text-align: center;
   }
 
   /* CLIENTS */
@@ -881,8 +908,15 @@ footer ul {
 
   /* UNLOCK */
 
-  .unlock {
-    flex-wrap: wrap;
+  .unlock,
+  .container-business,
+  .container-tesla {
+    padding: 2rem;
+  }
+
+  .container-social {
+    flex-direction: column;
+    row-gap: 40px;
   }
 
   .content-unlock {
@@ -906,6 +940,20 @@ footer ul {
     display: none;
   }
 
+  .content-statistics {
+    grid-template-columns: 1fr;
+  }
+
+  .membership p,
+  .national p,
+  .clubs p {
+    width: 100%;
+  }
+
+  .content-client {
+    padding: 0 0;
+  }
+
   /* FOOTER */
 
   .footer {
@@ -925,6 +973,14 @@ footer ul {
 
   .footer-container-links {
     justify-content: space-around;
+    width: auto;
+    height: auto;
+  }
+
+  .footer-company,
+  .company-links {
+    width: auto;
+    height: auto;
   }
 
   .footer-input-mobile {
